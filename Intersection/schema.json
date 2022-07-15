@@ -1,0 +1,277 @@
+{"$schema": "http://json-schema.org/schema",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://raw.githubusercontent.com/victormanoly/dataModel.Transportation/master/Intersection/schema.json",
+    "title": "Smart Data models - Intersection",
+    "modelTags": "",
+    "description": "This model a particular intersection.",
+    "type": "object",
+    "required": [
+      "id",
+      "type"
+    ],
+    "allOf": [
+      {
+        "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      },
+      {
+        "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+      },
+      {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Intersection"
+            ],
+            "description": "Property. Model:'https://schema.org/Text'."
+          },
+          "intersectionType": {
+            "type": "string",
+            "enum": [
+              "three-leg",
+              "four-leg",
+              "multi-leg"
+            ],
+            "description": "Property. Type of intersection from the point of view of the number of road segments."
+          },
+          "intersectionSignal": {
+            "type": "string",
+            "enum": [
+              "signalized",
+              "non-signalized"
+            ],
+            "description": "Property. Type of intersection from the point of view of the signalization."
+          },
+          "road": {
+            "type": "object",
+            "description": "Property. Road features.",
+            "allOf": [
+              {"$ref": "https://smart-data-models.github.io/dataModel.Transportation/Road/schema.json"
+              }
+            ],
+            "properties": {
+              "surface": {
+                "type": "string",
+                "description": "Property. Road surface.",
+                "enum": [
+                  "asphalt",
+                  "concrete",
+                  "composite",
+                  "chipseal",
+                  "gravel",
+                  "paver"
+                ]
+              },
+              "roughness": {
+                "type": "number",
+                "description": "Property. Value of international roughness index (IRI). Units: meter per kilometer (m/km).",
+                "minimum": 0
+              },
+              "friction": {
+                "type": "number",
+                "description": "Property. Value of friction coefficient, the value is related to the type of road material. Minimum related to friction on ice. Maximum related to friction on asphalt or concrete (dry). Ref:https://ieeexplore.ieee.org/document/6940633",
+                "minimum": 0.1,
+                "maximum": 0.9
+              }
+            }
+          },
+          "roadSegment": {
+            "type": "object",
+            "description": "Property. Road segment features.",
+            "allOf": [
+              {"$ref": "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json"
+              }
+            ],
+            "properties": {
+              "length": {
+                "type": "number",
+                "const": 100,
+                "description": "Property. Total length of this road segment in meters. Constant. Units:Meter (m)."
+              }
+            }
+          },
+          "bikeLane": {
+            "type": "object",
+            "description": "Property. Bike Lane",
+            "allOf": [
+              {"$ref": "https://smart-data-models.github.io/dataModel.Transportation/Road/schema.json"
+              }
+            ],
+            "properties": {
+              "laneLength": {
+                "type": "number",
+                "cte": 100,
+                "description": "Property. Total length of this bike lane in meters. Constant. Units:Meter (m)."
+              },
+              "laneWidth": {
+                "type": "number",
+                "description": "Property. Model:'https://schema.org/Number'. Indicates the width of the lane."
+              },
+              "laneOccupancy": {
+                "type": "number",
+                "description": "Property. Model:'https://schema.org/Number'. Indicates the number of vehicles circulating on the lane."
+              }
+            }
+          },
+          "pedestrianLane": {
+            "type": "object",
+            "description": "Property. Pedestrian Lane",
+            "properties": {
+              "refRoadSegment": {
+                "anyOf": [
+                    {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256,
+                        "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                        "description": "Property. Identifier format of any NGSI entity"
+                    },
+                    {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Property. Identifier format of any NGSI entity"
+                    }
+                ],
+                "description": "Relationship. Concerned road segment on which the observation has been made"
+              },
+              "laneLength": {
+                "type": "number",
+                "cte": 100,
+                "description": "Property. Total length of this bike lane in meters. Constant. Units:Meter (m)."
+              },
+              "laneWidth": {
+                "type": "number",
+                "description": "Property. Model:'https://schema.org/Number'. Indicates the width of the lane."
+              },
+              "laneOccupancy": {
+                "type": "number",
+                "description": "Property. Model:'https://schema.org/Number'. Indicates the number of vehicles circulating on the lane."
+              },
+              "direction": {
+                "type": "string",
+                "enum": [
+                  "inbound",
+                  "outbound"
+                ],
+                "description": "Property. Usual direction of travel in the walkway referred by this observation with respect to the intersection center"
+              }
+            }
+          },
+          "intersectionStatus": {
+            "type": "string",
+            "enum": [
+              "normal",
+              "accident"
+            ],
+            "description": "Property. Intersection status operation"
+          },
+          "intersetionAccident": {
+            "$ref": "https://smart-data-models.github.io/dataModel.Transportation/RoadAccident/schema.json",
+            "description": "A road accident description with causes and aftermath"
+          },
+          "geoLocation": {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+          },
+          "currentWeather": {
+            "type": "object",
+            "description": "Property. Current weather information corresponding to this observation.",
+            "properties": {
+              "temperature": {
+                "type": "number",
+                "description": "Property. Temperature in Celcius"
+              },
+              "humidity": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "Property. Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)"
+              },
+              "visibility": {
+                "description": "Property. Model:'http://schema.org/Text'. Categories of visibility",
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "veryPoor",
+                      "poor",
+                      "moderate",
+                      "good",
+                      "veryGood",
+                      "excellent"
+                    ]
+                  },
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                ]
+              },
+              "windDirection": {
+                "type": "number",
+                "description": "Property. Model:'http://schema.org/Number'. Direction of the wind bet",
+                "minimum": 0,
+                "maximum": 360
+              },
+              "windSpeed": {
+                "type": "number",
+                "description": "Property. Model:'http//schema.org/Number'. Intensity of the wind",
+                "minimum": 0
+              },
+              "gustSpeed": {
+                "type": "number",
+                "description": "Property. A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds."
+              },
+              "precipitation": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Property. Model:'https://schema.org/Number'. Amount of water rain expected. Units:'Liters per square meter'."
+              },
+              "waterLevel": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
+              }
+            }
+          },
+          "pedestrian":{
+            "$ref": "https://raw.githubusercontent.com/victormanoly/dataModel.Transportation/master/Pedestrian/schema.json"
+          },
+          "cyclist":{
+            "$ref": "https://raw.githubusercontent.com/victormanoly/dataModel.Transportation/master/Cyclist/schema.json"
+          },  
+          "vehicle": {
+            "$ref": "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json",
+            "description": "Property. Vehicle."
+          },
+          "municipalityInfo": {
+            "type": "object",
+            "description": "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation.",
+            "properties": {
+              "cityID": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation."
+              },
+              "stateName": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation."
+              },
+              "cityName": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. City name corresponding to this observation."
+              },
+              "zoneName": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation."
+              },
+              "zoneID": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation."
+              }
+            }
+          }
+        }
+      }
+    ],
+    "derivedFrom": "",
+    "license": ""
+}

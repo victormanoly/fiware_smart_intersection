@@ -1,0 +1,2138 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "fiware:schema",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "Cyclist": "fiware:Cyclist",
+        "EntityIdentifierType": "fiware:EntityIdentifierType",
+        "GSMA-Commons": "fiware:GSMA-Commons",
+        "Intersection": "fiware:Intersection",
+        "Location-Commons": "fiware:Location-Commons",
+        "LocationCommons_address": "fiware:LocationCommons_address",
+        "Pedestrian": "fiware:Pedestrian",
+        "PhysicalObject-Commons": "fiware:PhysicalObject-Commons",
+        "Vehicle": "fiware:Vehicle",
+        "accidentDate": {
+            "@id": "fiware:accidentDate",
+            "@type": "xs:dateTime"
+        },
+        "accidentDescription": {
+            "@id": "fiware:accidentDescription",
+            "@type": "xsd:array"
+        },
+        "accidentLocation": {
+            "@id": "fiware:accidentLocation",
+            "@type": "xsd:string"
+        },
+        "accidentStatisticalDate": "fiware:accidentStatisticalDate",
+        "accidentType": {
+            "@id": "fiware:accidentType",
+            "@type": "xsd:array"
+        },
+        "address": "fiware:address",
+        "addressCountry": {
+            "@id": "fiware:addressCountry",
+            "@type": "xsd:string"
+        },
+        "addressLocality": {
+            "@id": "fiware:addressLocality",
+            "@type": "xsd:string"
+        },
+        "addressRegion": {
+            "@id": "fiware:addressRegion",
+            "@type": "xsd:string"
+        },
+        "allowedVehicleType": {
+            "@id": "fiware:allowedVehicleType",
+            "@type": "xsd:array"
+        },
+        "alternateName": {
+            "@id": "fiware:alternateName",
+            "@type": "xsd:string"
+        },
+        "annotations": {
+            "@id": "fiware:annotations",
+            "@type": "xsd:array"
+        },
+        "areaServed": {
+            "@id": "fiware:areaServed",
+            "@type": "xsd:string"
+        },
+        "bearing": {
+            "@id": "fiware:bearing",
+            "@type": "xsd:number"
+        },
+        "bikeLane": "fiware:bikeLane",
+        "cargoWeight": {
+            "@id": "fiware:cargoWeight",
+            "@type": "xsd:number"
+        },
+        "category": {
+            "@id": "fiware:category",
+            "@type": "xsd:array"
+        },
+        "cityID": {
+            "@id": "fiware:cityID",
+            "@type": "xsd:string"
+        },
+        "cityId": {
+            "@id": "fiware:cityId",
+            "@type": "xsd:string"
+        },
+        "cityName": {
+            "@id": "fiware:cityName",
+            "@type": "xsd:string"
+        },
+        "color": {
+            "@id": "fiware:color",
+            "@type": "xsd:string"
+        },
+        "currentTripCount": {
+            "@id": "fiware:currentTripCount",
+            "@type": "xsd:number"
+        },
+        "currentWeather": "fiware:currentWeather",
+        "cyclist": "fiware:cyclist",
+        "dataProvider": {
+            "@id": "fiware:dataProvider",
+            "@type": "xsd:string"
+        },
+        "dateCreated": {
+            "@id": "fiware:dateCreated",
+            "@type": "xs:dateTime"
+        },
+        "dateFirstUsed": {
+            "@id": "fiware:dateFirstUsed",
+            "@type": "xsd:string"
+        },
+        "dateModified": {
+            "@id": "fiware:dateModified",
+            "@type": "xs:dateTime"
+        },
+        "dateVehicleFirstRegistered": {
+            "@id": "fiware:dateVehicleFirstRegistered",
+            "@type": "xsd:string"
+        },
+        "description": {
+            "@id": "fiware:description",
+            "@type": "xsd:string"
+        },
+        "deviceBatteryStatus": {
+            "@id": "fiware:deviceBatteryStatus",
+            "@type": "xsd:string"
+        },
+        "deviceSimNumber": {
+            "@id": "fiware:deviceSimNumber",
+            "@type": "xsd:string"
+        },
+        "direction": {
+            "@id": "fiware:direction",
+            "@type": "xsd:string"
+        },
+        "district": {
+            "@id": "fiware:district",
+            "@type": "xsd:string"
+        },
+        "emergencyVehicleType": {
+            "@id": "fiware:emergencyVehicleType",
+            "@type": "xsd:string"
+        },
+        "endKilometer": {
+            "@id": "fiware:endKilometer",
+            "@type": "xsd:number"
+        },
+        "endPoint": {
+            "@id": "fiware:endPoint",
+            "@type": "xsd:undefined"
+        },
+        "feature": {
+            "@id": "fiware:feature",
+            "@type": "xsd:array"
+        },
+        "fleetVehicleId": {
+            "@id": "fiware:fleetVehicleId",
+            "@type": "xsd:string"
+        },
+        "friction": {
+            "@id": "fiware:friction",
+            "@type": "xsd:number"
+        },
+        "fuelEfficiency": {
+            "@id": "fiware:fuelEfficiency",
+            "@type": "xsd:number"
+        },
+        "fuelFilled": {
+            "@id": "fiware:fuelFilled",
+            "@type": "xsd:number"
+        },
+        "fuelType": {
+            "@id": "fiware:fuelType",
+            "@type": "xsd:string"
+        },
+        "geoLocation": {
+            "@id": "fiware:geoLocation",
+            "@type": "xsd:undefined"
+        },
+        "gustSpeed": {
+            "@id": "fiware:gustSpeed",
+            "@type": "xsd:number"
+        },
+        "heading": {
+            "@id": "fiware:heading",
+            "@type": "xsd:undefined"
+        },
+        "hour": {
+            "@id": "fiware:hour",
+            "@type": "xsd:integer"
+        },
+        "humidity": {
+            "@id": "fiware:humidity",
+            "@type": "xsd:number"
+        },
+        "ignitionStatus": {
+            "@id": "fiware:ignitionStatus",
+            "@type": "xsd:boolean"
+        },
+        "image": {
+            "@id": "fiware:image",
+            "@type": "xs:anyURI"
+        },
+        "intersectionSignal": {
+            "@id": "fiware:intersectionSignal",
+            "@type": "xsd:string"
+        },
+        "intersectionStatus": {
+            "@id": "fiware:intersectionStatus",
+            "@type": "xsd:string"
+        },
+        "intersectionType": {
+            "@id": "fiware:intersectionType",
+            "@type": "xsd:string"
+        },
+        "intersetionAccident": "fiware:intersetionAccident",
+        "laneLength": {
+            "@id": "fiware:laneLength",
+            "@type": "xsd:number"
+        },
+        "laneOccupancy": {
+            "@id": "fiware:laneOccupancy",
+            "@type": "xsd:number"
+        },
+        "laneUsage": {
+            "@id": "fiware:laneUsage",
+            "@type": "xsd:array"
+        },
+        "laneWidth": {
+            "@id": "fiware:laneWidth",
+            "@type": "xsd:number"
+        },
+        "length": {
+            "@id": "fiware:length",
+            "@type": "xsd:number"
+        },
+        "license_plate": {
+            "@id": "fiware:license_plate",
+            "@type": "xsd:string"
+        },
+        "localId": {
+            "@id": "fiware:localId",
+            "@type": "xsd:string"
+        },
+        "location": {
+            "@id": "fiware:location",
+            "@type": "xsd:undefined"
+        },
+        "maximumAllowedHeight": {
+            "@id": "fiware:maximumAllowedHeight",
+            "@type": "xsd:number"
+        },
+        "maximumAllowedSpeed": {
+            "@id": "fiware:maximumAllowedSpeed",
+            "@type": "xsd:number"
+        },
+        "maximumAllowedWeight": {
+            "@id": "fiware:maximumAllowedWeight",
+            "@type": "xsd:number"
+        },
+        "mileageFromOdometer": {
+            "@id": "fiware:mileageFromOdometer",
+            "@type": "xsd:number"
+        },
+        "minimumAllowedSpeed": {
+            "@id": "fiware:minimumAllowedSpeed",
+            "@type": "xsd:number"
+        },
+        "municipalityInfo": "fiware:municipalityInfo",
+        "name": {
+            "@id": "fiware:name",
+            "@type": "xsd:string"
+        },
+        "numPassengersDead": {
+            "@id": "fiware:numPassengersDead",
+            "@type": "xsd:integer"
+        },
+        "numPassengersInjured": {
+            "@id": "fiware:numPassengersInjured",
+            "@type": "xsd:integer"
+        },
+        "numPedestrianDead": {
+            "@id": "fiware:numPedestrianDead",
+            "@type": "xsd:integer"
+        },
+        "numPedestrianInjured": {
+            "@id": "fiware:numPedestrianInjured",
+            "@type": "xsd:integer"
+        },
+        "observationDateTime": {
+            "@id": "fiware:observationDateTime",
+            "@type": "xs:dateTime"
+        },
+        "owner": {
+            "@id": "fiware:owner",
+            "@type": "xsd:array"
+        },
+        "pedestrian": "fiware:pedestrian",
+        "pedestrianLane": "fiware:pedestrianLane",
+        "pedestrianType": {
+            "@id": "fiware:pedestrianType",
+            "@type": "xsd:string"
+        },
+        "pedestriansInvolved": {
+            "@id": "fiware:pedestriansInvolved",
+            "@type": "xsd:boolean"
+        },
+        "postOfficeBoxNumber": {
+            "@id": "fiware:postOfficeBoxNumber",
+            "@type": "xsd:string"
+        },
+        "postalCode": {
+            "@id": "fiware:postalCode",
+            "@type": "xsd:string"
+        },
+        "precipitation": {
+            "@id": "fiware:precipitation",
+            "@type": "xsd:number"
+        },
+        "previousLocation": {
+            "@id": "fiware:previousLocation",
+            "@type": "xsd:undefined"
+        },
+        "purchaseDate": {
+            "@id": "fiware:purchaseDate",
+            "@type": "xs:dateTime"
+        },
+        "quarter": {
+            "@id": "fiware:quarter",
+            "@type": "xsd:integer"
+        },
+        "refRoad": {
+            "@id": "fiware:refRoad",
+            "@type": "xsd:undefined"
+        },
+        "refRoadSegment": {
+            "@id": "fiware:refRoadSegment",
+            "@type": "xsd:undefined"
+        },
+        "refVehicleModel": {
+            "@id": "fiware:refVehicleModel",
+            "@type": "xsd:undefined"
+        },
+        "relativeHumidity": "fiware:relativeHumidity",
+        "reportID": {
+            "@id": "fiware:reportID",
+            "@type": "xsd:string"
+        },
+        "reportId": {
+            "@id": "fiware:reportId",
+            "@type": "xsd:string"
+        },
+        "responsible": {
+            "@id": "fiware:responsible",
+            "@type": "xsd:string"
+        },
+        "road": "fiware:road",
+        "roadClass": {
+            "@id": "fiware:roadClass",
+            "@type": "xsd:string"
+        },
+        "roadIntersection": {
+            "@id": "fiware:roadIntersection",
+            "@type": "xsd:string"
+        },
+        "roadPaving": {
+            "@id": "fiware:roadPaving",
+            "@type": "xsd:string"
+        },
+        "roadSegment": "fiware:roadSegment",
+        "roadSign": {
+            "@id": "fiware:roadSign",
+            "@type": "xsd:string"
+        },
+        "roadSurface": {
+            "@id": "fiware:roadSurface",
+            "@type": "xsd:string"
+        },
+        "roadTrunk": {
+            "@id": "fiware:roadTrunk",
+            "@type": "xsd:string"
+        },
+        "roughness": {
+            "@id": "fiware:roughness",
+            "@type": "xsd:number"
+        },
+        "schema_1": "fiware:schema_1",
+        "schema_2": "fiware:schema_2",
+        "schema_3": "fiware:schema_3",
+        "schema_3_accidentStatisticalDate": "fiware:schema_3_accidentStatisticalDate",
+        "schema_4": "fiware:schema_4",
+        "schema_4_municipalityInfo": "fiware:schema_4_municipalityInfo",
+        "schema_5": "fiware:schema_5",
+        "schema_6": "fiware:schema_6",
+        "schema_6_municipalityInfo": "fiware:schema_6_municipalityInfo",
+        "schema_bikeLane": "fiware:schema_bikeLane",
+        "schema_currentWeather": "fiware:schema_currentWeather",
+        "schema_municipalityInfo": "fiware:schema_municipalityInfo",
+        "schema_pedestrianLane": "fiware:schema_pedestrianLane",
+        "schema_road": "fiware:schema_road",
+        "schema_roadSegment": "fiware:schema_roadSegment",
+        "seeAlso": {
+            "@id": "fiware:seeAlso",
+            "@type": "xsd:undefined"
+        },
+        "serviceOnDuty": {
+            "@id": "fiware:serviceOnDuty",
+            "@type": "xsd:string"
+        },
+        "serviceProvided": {
+            "@id": "fiware:serviceProvided",
+            "@type": "xsd:array"
+        },
+        "serviceStatus": {
+            "@id": "fiware:serviceStatus",
+            "@type": "xsd:string"
+        },
+        "source": {
+            "@id": "fiware:source",
+            "@type": "xsd:string"
+        },
+        "speed": {
+            "@id": "fiware:speed",
+            "@type": "xsd:undefined"
+        },
+        "startKilometer": {
+            "@id": "fiware:startKilometer",
+            "@type": "xsd:number"
+        },
+        "startPoint": {
+            "@id": "fiware:startPoint",
+            "@type": "xsd:undefined"
+        },
+        "stateName": {
+            "@id": "fiware:stateName",
+            "@type": "xsd:string"
+        },
+        "status": {
+            "@id": "fiware:status",
+            "@type": "xsd:string"
+        },
+        "statusDescription": {
+            "@id": "fiware:statusDescription",
+            "@type": "xsd:string"
+        },
+        "streetAddress": {
+            "@id": "fiware:streetAddress",
+            "@type": "xsd:string"
+        },
+        "surface": {
+            "@id": "fiware:surface",
+            "@type": "xsd:string"
+        },
+        "temperature": {
+            "@id": "fiware:temperature",
+            "@type": "xsd:number"
+        },
+        "totalDeadPeopleWithin24Hours": {
+            "@id": "fiware:totalDeadPeopleWithin24Hours",
+            "@type": "xsd:integer"
+        },
+        "totalDeadPeopleWithin30Days": {
+            "@id": "fiware:totalDeadPeopleWithin30Days",
+            "@type": "xsd:integer"
+        },
+        "totalInjured": {
+            "@id": "fiware:totalInjured",
+            "@type": "xsd:integer"
+        },
+        "totalLaneNumber": {
+            "@id": "fiware:totalLaneNumber",
+            "@type": "xsd:number"
+        },
+        "tripNetWeightCollected": {
+            "@id": "fiware:tripNetWeightCollected",
+            "@type": "xsd:number"
+        },
+        "ulbName": {
+            "@id": "fiware:ulbName",
+            "@type": "xsd:string"
+        },
+        "vehicle": "fiware:vehicle",
+        "vehicleAltitude": {
+            "@id": "fiware:vehicleAltitude",
+            "@type": "xsd:string"
+        },
+        "vehicleConfiguration": {
+            "@id": "fiware:vehicleConfiguration",
+            "@type": "xsd:string"
+        },
+        "vehicleIdentificationNumber": {
+            "@id": "fiware:vehicleIdentificationNumber",
+            "@type": "xsd:string"
+        },
+        "vehiclePlateIdentifier": {
+            "@id": "fiware:vehiclePlateIdentifier",
+            "@type": "xsd:string"
+        },
+        "vehicleRunningStatus": {
+            "@id": "fiware:vehicleRunningStatus",
+            "@type": "xsd:string"
+        },
+        "vehicleSpecialUsage": {
+            "@id": "fiware:vehicleSpecialUsage",
+            "@type": "xsd:string"
+        },
+        "vehicleTrackerDevice": {
+            "@id": "fiware:vehicleTrackerDevice",
+            "@type": "xsd:string"
+        },
+        "vehicleType": {
+            "@id": "fiware:vehicleType",
+            "@type": "xsd:string"
+        },
+        "vehiclesInvolved": {
+            "@id": "fiware:vehiclesInvolved",
+            "@type": "xsd:array"
+        },
+        "visibility": {
+            "@id": "fiware:visibility",
+            "@type": "xsd:undefined"
+        },
+        "wardId": {
+            "@id": "fiware:wardId",
+            "@type": "xsd:string"
+        },
+        "wardName": {
+            "@id": "fiware:wardName",
+            "@type": "xsd:string"
+        },
+        "wardNum": {
+            "@id": "fiware:wardNum",
+            "@type": "xsd:number"
+        },
+        "waterLevel": {
+            "@id": "fiware:waterLevel",
+            "@type": "xsd:number"
+        },
+        "weakestSubject": {
+            "@id": "fiware:weakestSubject",
+            "@type": "xsd:string"
+        },
+        "weatherConditions": {
+            "@id": "fiware:weatherConditions",
+            "@type": "xsd:array"
+        },
+        "weekday": {
+            "@id": "fiware:weekday",
+            "@type": "xsd:string"
+        },
+        "width": {
+            "@id": "fiware:width",
+            "@type": "xsd:number"
+        },
+        "windDirection": {
+            "@id": "fiware:windDirection",
+            "@type": "xsd:number"
+        },
+        "windSpeed": {
+            "@id": "fiware:windSpeed",
+            "@type": "xsd:number"
+        },
+        "year": {
+            "@id": "fiware:year",
+            "@type": "xsd:integer"
+        },
+        "zoneID": {
+            "@id": "fiware:zoneID",
+            "@type": "xsd:string"
+        },
+        "zoneId": {
+            "@id": "fiware:zoneId",
+            "@type": "xsd:string"
+        },
+        "zoneName": {
+            "@id": "fiware:zoneName",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "fiware:Intersection",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Intersection"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:Pedestrian",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Pedestrian"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:Cyclist",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Cyclist"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:Vehicle",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Vehicle"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "This model a particular intersection."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:GSMA-Commons",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "GSMA-Commons"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:EntityIdentifierType",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Unique identifier of the entity"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "EntityIdentifierType"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:Location-Commons",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Location-Commons"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_1",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "This entity contains a harmonised geographic and contextual description of a road."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_1"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:PhysicalObject-Commons",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "PhysicalObject-Commons"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_2",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_2"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:location",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_3",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A road accident description with causes and aftermath. First version developed in Synchronicity project"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_3"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:temperature",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Temperature of the item"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "temperature"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:relativeHumidity",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "relativeHumidity"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_4",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "This model a particular pedestrian."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_4"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_5",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "This model a particular cyclist."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_5"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_6",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_6"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_road",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Road features."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_road"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_roadSegment",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Road segment features."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_roadSegment"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_bikeLane",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Bike Lane"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_bikeLane"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_pedestrianLane",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Pedestrian Lane"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_pedestrianLane"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_currentWeather",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Current weather information corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_currentWeather"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_municipalityInfo",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_municipalityInfo"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:LocationCommons_address",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. The mailing address. Model:'https://schema.org/address'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "LocationCommons_address"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_3_accidentStatisticalDate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. approximate datetime of the accident (often original accident data source reports only statistical attributes such as season, weekday and approximate hour. Model:'https://schema.org/DateTime'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_3_accidentStatisticalDate"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_4_municipalityInfo",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_4_municipalityInfo"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:schema_6_municipalityInfo",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "schema_6_municipalityInfo"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:id",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Unique identifier of the entity"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "id"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:dateCreated",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Entity creation timestamp. This will usually be allocated by the storage platform."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "dateCreated"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:dateModified",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "dateModified"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:source",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "source"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:name",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. The name of this item."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "name"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:alternateName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. An alternative name for this item"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "alternateName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:description",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. A description of this item"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "description"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:dataProvider",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. A sequence of characters identifying the provider of the harmonised data entity."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "dataProvider"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:owner",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "owner"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:seeAlso",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. list of uri pointing to additional resources about the item"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "seeAlso"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:location",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:address",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. The mailing address. Model:'https://schema.org/address'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "address"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:areaServed",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. The geographic area where a service or offered item is provided. Model:'https://schema.org/Text'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "areaServed"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:color",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. The color of the product. Model:'https://schema.org/color'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "color"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:image",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. An image of the item. Model:'https://schema.org/URL'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "image"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:annotations",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Annotations about the item. Model:'https://schema.org/Text'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "annotations"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:roughness",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Value of international roughness index (IRI). Units: meter per kilometer (m/km)."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "roughness"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:friction",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Value of friction coefficient, the value is related to the type of road material. Minimum related to friction on ice. Maximum related to friction on asphalt or concrete (dry). Ref:https://ieeexplore.ieee.org/document/6940633"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "friction"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:length",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Total length of this road segment in meters. Constant. Units:Meter (m)."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "length"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:laneLength",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Total length of this bike lane in meters. Constant. Units:Meter (m)."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "laneLength"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:laneWidth",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Number'. Indicates the width of the lane."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "laneWidth"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:laneOccupancy",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Number'. Indicates the number of vehicles circulating on the lane."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "laneOccupancy"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:refRoadSegment",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Relationship. Concerned road segment on which the observation has been made"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "refRoadSegment"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:laneLength",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Total length of this bike lane in meters. Constant. Units:Meter (m)."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "laneLength"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:laneWidth",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Number'. Indicates the width of the lane."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "laneWidth"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:laneOccupancy",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Number'. Indicates the number of vehicles circulating on the lane."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "laneOccupancy"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:temperature",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Temperature of the item"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "temperature"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:humidity",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "humidity"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:visibility",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'http://schema.org/Text'. Categories of visibility"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "visibility"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:windDirection",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'http://schema.org/Number'. Direction of the wind bet"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "windDirection"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:windSpeed",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'http//schema.org/Number'. Intensity of the wind"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "windSpeed"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:gustSpeed",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "gustSpeed"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:precipitation",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Number'. Amount of water rain expected. Units:'Liters per square meter'."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "precipitation"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:waterLevel",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "waterLevel"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:cityID",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "cityID"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:stateName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "stateName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:cityName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. City name corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "cityName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:zoneName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "zoneName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:zoneID",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "zoneID"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:streetAddress",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. The street address. Model:'https://schema.org/streetAddress'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "streetAddress"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:addressLocality",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. The locality in which the street address is, and which is in the region. Model:'https://schema.org/addressLocality'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "addressLocality"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:addressRegion",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. The region in which the locality is, and which is in the country. Model:'https://schema.org/addressRegion'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "addressRegion"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:addressCountry",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "addressCountry"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:postalCode",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "postalCode"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:postOfficeBoxNumber",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. The post office box number for PO box addresses. For example, 03578. Model:'https://schema.org/postOfficeBoxNumber'"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "postOfficeBoxNumber"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:year",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "year"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:quarter",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "quarter"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:hour",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "hour"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:district",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. District name corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "district"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:cityID",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "cityID"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:stateName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "stateName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:cityName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. City name corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "cityName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:zoneName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "zoneName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:zoneID",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "zoneID"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:district",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. District name corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "district"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:ulbName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Name of the Urban Local Body corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "ulbName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:cityId",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "cityId"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:wardId",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Ward ID corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "wardId"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:stateName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "stateName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:cityName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. City name corresponding to this observation"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "cityName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:zoneName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "zoneName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:zoneId",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "zoneId"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:wardName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Text'. Ward name corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "wardName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:wardNum",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property. Model:'https://schema.org/Number'. Ward number corresponding to this observation."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "wardNum"
+                }
+            ]
+        }
+    ]
+}

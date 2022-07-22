@@ -1,0 +1,152 @@
+version: "3.8"
+services:
+  ### Orion context broker ###
+  orion:
+    labels:
+      br.ufes.nerds: 'phd'
+    image: fiware/orion-ld:${ORION_LD_VERSION}
+    hostname: orion
+    container_name: fiware-orion
+    depends_on:
+      - mongo-db
+    networks:
+      - default
+    ports:
+      - "${ORION_LD_PORT}:${ORION_LD_PORT}" # localhost:1026
+    command: -dbhost mongo-db -logLevel DEBUG -forwarding
+    healthcheck:
+      test: curl --fail -s http://orion:${ORION_LD_PORT}/version || exit 1
+      interval: 5s
+
+  mongo-db:
+    labels:
+      br.ufes.nerds: 'phd'
+    image: mongo:${MONGO_DB_VERSION}
+    hostname: mongo-db
+    container_name: db-mongo
+    expose:
+      - "${MONGO_DB_PORT}"
+    ports:
+      - "${MONGO_DB_PORT}:${MONGO_DB_PORT}" # localhost:27017
+    networks:
+      - default
+    volumes:
+      - mongo-db:/data/db
+      - mongo-config:/data/configdb
+    healthcheck:
+      test: |
+        host=`hostname --ip-address || echo '127.0.0.1'`; 
+        mongo --quiet $host/test --eval 'quit(db.runCommand({ ping: 1 }).ok ? 0 : 2)' && echo 0 || echo 1    
+      interval: 5s
+
+  ### Context server ###
+  ld-context:
+    labels:
+      br.ufes.nerds: 'phd'
+    image: httpd:alpine
+    hostname: context
+    container_name: fiware-ld-context
+    ports:
+        - "3004:80"
+    volumes:
+        - data-models:/usr/local/apache2/htdocs/
+    healthcheck:
+      test: (wget --server-response --spider --quiet  http://ld-context/ngsi-context.jsonld 2>&1 | awk 'NR==1{print $$2}'|  grep -q -e "200") || exit 1
+
+
+  ### Visualization ###
+  #create user to loggin in the container terminal
+  #python manage.py createsuperuser --username victor
+  wirecloud:
+    labels:
+      br.ufes.nerds: 'phd'
+    image: fiware/wirecloud:${WIRECLOUD_VERSION}
+    hostname: wirecloud
+    container_name: fiware-wirecloud
+    ports:
+        - "${WIRECLOUD_PORT}:${WIRECLOUD_PORT}"
+    depends_on:
+      - postgres-db
+      - elasticsearch
+      - memcached
+    networks:
+      default:
+        ipv4_address: 172.18.1.10
+    environment:
+      - DEBUG=True
+      - DEFAULT_THEME=wirecloud.defaulttheme
+      - DB_HOST=postgres-db
+      - DB_PASSWORD=wirepass
+      - FORWARDED_ALLOW_IPS=*
+      - ELASTICSEARCH2_URL=http://elasticsearch:9200/
+      - MEMCACHED_LOCATION=memcached:11211
+
+    volumes:
+      - wirecloud-data:/opt/wirecloud_instance/data
+      - wirecloud-static:/var/www/static
+
+  postgres-db:
+    image: postgres:${POSTGRES_DB_VERSION}
+    hostname: postgres-db
+    container_name: db-postgres
+    restart: always
+    ports:
+      - "${POSTGRES_DB_PORT}:${POSTGRES_DB_PORT}"
+    networks:
+      default:
+        ipv4_address: 172.18.1.13
+    environment:
+      - POSTGRES_PASSWORD=wirepass
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+
+  elasticsearch:
+    image: elasticsearch:2.4
+    container_name: wc-elasticsearch
+    hostname: elasticsearch
+    ports:
+      - "9200:9200"
+    networks:
+      default:
+        ipv4_address: 172.18.1.12
+
+    restart: always
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    command: elasticsearch -Des.index.max_result_window=50000
+
+  memcached:
+    image: memcached:1
+    container_name: wc-memcached
+    hostname: memcached
+    ports:
+      - "11211:11211"
+    networks:
+      default:
+        ipv4_address: 172.18.1.11
+
+    restart: always
+    command: memcached -m 2048m
+
+networks:
+  default:
+    labels:
+      br.ufes.nerds: 'phd'
+    ipam:
+      config:
+        - subnet: ${SUBNET}
+
+volumes:
+  mongo-db: ~
+  mongo-config: ~
+  wirecloud-static: ~
+  wirecloud-data: ~
+  postgres-db: ~
+  mysql-db: ~
+  elasticsearch-data: ~
+  data-models:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/data-models

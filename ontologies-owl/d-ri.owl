@@ -1,0 +1,1088 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:webprotege:ontology:dt-ri#"
+     xml:base="urn:webprotege:ontology:dt-ri"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:webprotege:ontology:dt-ri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- hasMeasurement -->
+
+    <owl:ObjectProperty rdf:about="hasMeasurement">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasMeasurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- measurementMadeBy -->
+
+    <owl:ObjectProperty rdf:about="measurementMadeBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">measurementMadeBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- isLocatedAt -->
+
+    <owl:ObjectProperty rdf:about="isLocatedAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">isLocatedAt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- isEnvolved -->
+
+    <owl:ObjectProperty rdf:about="isEnvolved">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">isEnvolved</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- hasGeometry -->
+
+    <owl:ObjectProperty rdf:about="hasGeometry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- hasGeneralFeature -->
+
+    <owl:ObjectProperty rdf:about="hasGeneralFeature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasGeneralFeature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- isSubSystemOf -->
+
+    <owl:ObjectProperty rdf:about="isSubSystemOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">isSubSystemOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- hasTransportObject -->
+
+    <owl:ObjectProperty rdf:about="hasTransportObject">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasTransportObject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- hasOrigen -->
+
+    <owl:ObjectProperty rdf:about="hasOrigen">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasOrigen</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- takePlaceAt -->
+
+    <owl:ObjectProperty rdf:about="takePlaceAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">takePlaceAt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- hasEnvironment -->
+
+    <owl:ObjectProperty rdf:about="hasEnvironment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasEnvironment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- isCollectionOf -->
+
+    <owl:ObjectProperty rdf:about="isCollectionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">isCollectionOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- makesMeasurement -->
+
+    <owl:ObjectProperty rdf:about="makesMeasurement">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">makesMeasurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- hasRoute -->
+
+    <owl:ObjectProperty rdf:about="hasRoute">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasRoute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- hasWeather -->
+
+    <owl:ObjectProperty rdf:about="hasWeather">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasWeather</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- takePlaceAtTime -->
+
+    <owl:ObjectProperty rdf:about="takePlaceAtTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">takePlaceAtTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- hasFeature -->
+
+    <owl:ObjectProperty rdf:about="hasFeature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasFeature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- consistOf -->
+
+    <owl:ObjectProperty rdf:about="consistOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">consistOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- hasDestination -->
+
+    <owl:ObjectProperty rdf:about="hasDestination">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasDestination</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- isMeasurementOf -->
+
+    <owl:ObjectProperty rdf:about="isMeasurementOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">isMeasurementOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- hasPosition -->
+
+    <owl:ObjectProperty rdf:about="hasPosition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasPosition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- belongTo -->
+
+    <owl:ObjectProperty rdf:about="belongTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">belongTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- hasParticularFeature -->
+
+    <owl:ObjectProperty rdf:about="hasParticularFeature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">hasParticularFeature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Intersection -->
+
+    <owl:Class rdf:about="Intersection">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasTransportObject"/>
+                <owl:someValuesFrom rdf:resource="RoadSideUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasTransportObject"/>
+                <owl:someValuesFrom rdf:resource="TrafficAgent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasWeather"/>
+                <owl:someValuesFrom rdf:resource="Weather"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="consistOf"/>
+                <owl:someValuesFrom rdf:resource="Topology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="belongTo"/>
+                <owl:someValuesFrom rdf:resource="AdministrativeArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Intersection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Point -->
+
+    <owl:Class rdf:about="Point">
+        <rdfs:subClassOf rdf:resource="Geometry"/>
+        <rdfs:label xml:lang="en">Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- RoadSideUnit -->
+
+    <owl:Class rdf:about="RoadSideUnit">
+        <rdfs:label xml:lang="en">RoadSideUnit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- R7ViYF7NQD3hnR01W5XkPWO -->
+
+    <owl:Class rdf:about="Bicyclist">
+        <rdfs:subClassOf rdf:resource="VRU"/>
+        <rdfs:label xml:lang="en">Bicyclist</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Geometry -->
+
+    <owl:Class rdf:about="Geometry">
+        <rdfs:subClassOf rdf:resource="Topology"/>
+        <rdfs:label xml:lang="en">Geometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Wearable -->
+
+    <owl:Class rdf:about="Wearable">
+        <rdfs:subClassOf rdf:resource="Device"/>
+        <rdfs:label xml:lang="en">Wearable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Heading -->
+
+    <owl:Class rdf:about="Heading">
+        <rdfs:subClassOf rdf:resource="TrafficAgentFeature"/>
+        <rdfs:label xml:lang="en">Heading</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- DisabledPeople -->
+
+    <owl:Class rdf:about="DisabledPeople">
+        <rdfs:subClassOf rdf:resource="VRUGroup"/>
+        <rdfs:label xml:lang="en">DisabledPeople</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- TrafficAgentFeature -->
+
+    <owl:Class rdf:about="TrafficAgentFeature">
+        <rdfs:subClassOf rdf:resource="FeatureOfInterest"/>
+        <rdfs:label xml:lang="en">TrafficAgentFeature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- RoutePoint -->
+
+    <owl:Class rdf:about="RoutePoint">
+        <rdfs:subClassOf rdf:resource="Point"/>
+        <rdfs:label xml:lang="en">RoutePoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Actuator -->
+
+    <owl:Class rdf:about="Actuator">
+        <rdfs:subClassOf rdf:resource="Device"/>
+        <rdfs:label xml:lang="en">Actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Radar -->
+
+    <owl:Class rdf:about="Radar">
+        <rdfs:subClassOf rdf:resource="RoadSideSensor"/>
+        <rdfs:label xml:lang="en">Radar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- StartPoint -->
+
+    <owl:Class rdf:about="StartPoint">
+        <rdfs:subClassOf rdf:resource="Point"/>
+        <rdfs:label xml:lang="en">StartPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Motorcyclist -->
+
+    <owl:Class rdf:about="Motorcyclist">
+        <rdfs:subClassOf rdf:resource="VRU"/>
+        <rdfs:label xml:lang="en">Motorcyclist</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- RoadObject -->
+
+    <owl:Class rdf:about="RoadObject">
+        <rdfs:label xml:lang="en">RoadObject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Visibility -->
+
+    <owl:Class rdf:about="Visibility">
+        <rdfs:subClassOf rdf:resource="WeatherFeature"/>
+        <rdfs:label xml:lang="en">Visibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- BikeLane -->
+
+    <owl:Class rdf:about="BikeLane">
+        <rdfs:subClassOf rdf:resource="TopologyFeature"/>
+        <rdfs:label xml:lang="en">BikeLane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- VRUGroup -->
+
+    <owl:Class rdf:about="VRUGroup">
+        <rdfs:subClassOf rdf:resource="VRUFeature"/>
+        <rdfs:label xml:lang="en">VRUGroup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Collision -->
+
+    <owl:Class rdf:about="Collision">
+        <rdfs:subClassOf rdf:resource="Event"/>
+        <rdfs:label xml:lang="en">Collision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Width -->
+
+    <owl:Class rdf:about="Width">
+        <rdfs:subClassOf rdf:resource="TrafficAgentFeature"/>
+        <rdfs:label xml:lang="en">Width</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- RelativePosition -->
+
+    <owl:Class rdf:about="RelativePosition">
+        <rdfs:subClassOf rdf:resource="Position"/>
+        <rdfs:label xml:lang="en">RelativePosition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Temperature -->
+
+    <owl:Class rdf:about="Temperature">
+        <rdfs:subClassOf rdf:resource="WeatherFeature"/>
+        <rdfs:label xml:lang="en">Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- TopologyFeature -->
+
+    <owl:Class rdf:about="TopologyFeature">
+        <rdfs:subClassOf rdf:resource="Topology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasGeometry"/>
+                <owl:someValuesFrom rdf:resource="Geometry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">TopologyFeature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Topology -->
+
+    <owl:Class rdf:about="Topology">
+        <rdfs:label xml:lang="en">Topology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Route -->
+
+    <owl:Class rdf:about="Route">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasOrigen"/>
+                <owl:someValuesFrom rdf:resource="StartPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isCollectionOf"/>
+                <owl:someValuesFrom rdf:resource="RoutePoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasDestination"/>
+                <owl:someValuesFrom rdf:resource="EndPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Route</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Curve -->
+
+    <owl:Class rdf:about="Curve">
+        <rdfs:subClassOf rdf:resource="Geometry"/>
+        <rdfs:label xml:lang="en">Curve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Pedestrian -->
+
+    <owl:Class rdf:about="Pedestrian">
+        <rdfs:subClassOf rdf:resource="VRU"/>
+        <rdfs:label xml:lang="en">Pedestrian</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- State -->
+
+    <owl:Class rdf:about="State">
+        <rdfs:subClassOf rdf:resource="AdministrativeArea"/>
+        <rdfs:label xml:lang="en">State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- RoadSideActuator -->
+
+    <owl:Class rdf:about="RoadSideActuator">
+        <rdfs:subClassOf rdf:resource="Actuator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isSubSystemOf"/>
+                <owl:someValuesFrom rdf:resource="RoadSideUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">RoadSideActuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Sensor -->
+
+    <owl:Class rdf:about="Sensor">
+        <rdfs:subClassOf rdf:resource="Device"/>
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Lidar -->
+
+    <owl:Class rdf:about="Lidar">
+        <rdfs:subClassOf rdf:resource="RoadSideSensor"/>
+        <rdfs:label xml:lang="en">Lidar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Acceleration -->
+
+    <owl:Class rdf:about="Acceleration">
+        <rdfs:subClassOf rdf:resource="TrafficAgentFeature"/>
+        <rdfs:label xml:lang="en">Acceleration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Device -->
+
+    <owl:Class rdf:about="Device">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="makesMeasurement"/>
+                <owl:someValuesFrom rdf:resource="Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Event -->
+
+    <owl:Class rdf:about="Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="takePlaceAt"/>
+                <owl:someValuesFrom rdf:resource="TopologyFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="takePlaceAtTime"/>
+                <owl:someValuesFrom rdf:resource="TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- City -->
+
+    <owl:Class rdf:about="City">
+        <rdfs:subClassOf rdf:resource="AdministrativeArea"/>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Measurement -->
+
+    <owl:Class rdf:about="Measurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="measurementMadeBy"/>
+                <owl:someValuesFrom rdf:resource="Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="takePlaceAtTime"/>
+                <owl:someValuesFrom rdf:resource="TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isMeasurementOf"/>
+                <owl:someValuesFrom rdf:resource="FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- VRU -->
+
+    <owl:Class rdf:about="VRU">
+        <rdfs:subClassOf rdf:resource="TrafficAgent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isEnvolved"/>
+                <owl:someValuesFrom rdf:resource="Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasGeneralFeature"/>
+                <owl:someValuesFrom rdf:resource="TrafficAgentFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasRoute"/>
+                <owl:someValuesFrom rdf:resource="Route"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasParticularFeature"/>
+                <owl:someValuesFrom rdf:resource="VRUFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">VRU</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- AbsolutePosition -->
+
+    <owl:Class rdf:about="AbsolutePosition">
+        <rdfs:subClassOf rdf:resource="Position"/>
+        <rdfs:label xml:lang="en">AbsolutePosition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- OnBoardEquipment -->
+
+    <owl:Class rdf:about="OnBoardEquipment">
+        <rdfs:subClassOf rdf:resource="Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isSubSystemOf"/>
+                <owl:someValuesFrom rdf:resource="Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">OnBoardEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Neighborhood -->
+
+    <owl:Class rdf:about="Neighborhood">
+        <rdfs:subClassOf rdf:resource="AdministrativeArea"/>
+        <rdfs:label xml:lang="en">Neighborhood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Line -->
+
+    <owl:Class rdf:about="Line">
+        <rdfs:subClassOf rdf:resource="Geometry"/>
+        <rdfs:label xml:lang="en">Line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Interval -->
+
+    <owl:Class rdf:about="Interval">
+        <rdfs:subClassOf rdf:resource="TemporalEntity"/>
+        <rdfs:label xml:lang="en">Interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- LightCondition -->
+
+    <owl:Class rdf:about="LightCondition">
+        <rdfs:subClassOf rdf:resource="FeatureOfInterest"/>
+        <rdfs:label xml:lang="en">LightCondition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- TrafficAgent -->
+
+    <owl:Class rdf:about="TrafficAgent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasFeature"/>
+                <owl:someValuesFrom rdf:resource="FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasPosition"/>
+                <owl:someValuesFrom rdf:resource="RelativePosition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasPosition"/>
+                <owl:someValuesFrom rdf:resource="AbsolutePosition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">TrafficAgent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- RoadSideSensor -->
+
+    <owl:Class rdf:about="RoadSideSensor">
+        <rdfs:subClassOf rdf:resource="Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isSubSystemOf"/>
+                <owl:someValuesFrom rdf:resource="RoadSideUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">RoadSideSensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Junction -->
+
+    <owl:Class rdf:about="Junction">
+        <rdfs:subClassOf rdf:resource="TopologyFeature"/>
+        <rdfs:label xml:lang="en">Junction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- WindSpeed -->
+
+    <owl:Class rdf:about="WindSpeed">
+        <rdfs:subClassOf rdf:resource="WeatherFeature"/>
+        <rdfs:label xml:lang="en">WindSpeed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- VRUFeature -->
+
+    <owl:Class rdf:about="VRUFeature">
+        <rdfs:subClassOf rdf:resource="FeatureOfInterest"/>
+        <rdfs:label xml:lang="en">VRUFeature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Road -->
+
+    <owl:Class rdf:about="Road">
+        <rdfs:subClassOf rdf:resource="TopologyFeature"/>
+        <rdfs:label xml:lang="en">Road</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Instant -->
+
+    <owl:Class rdf:about="Instant">
+        <rdfs:subClassOf rdf:resource="TemporalEntity"/>
+        <rdfs:label xml:lang="en">Instant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- RoadEntity -->
+
+    <owl:Class rdf:about="RoadEntity">
+        <rdfs:subClassOf rdf:resource="TrafficAgent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="consistOf"/>
+                <owl:someValuesFrom rdf:resource="RoadObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="consistOf"/>
+                <owl:someValuesFrom rdf:resource="VRU"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">RoadEntity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- TemporalEntity -->
+
+    <owl:Class rdf:about="TemporalEntity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">TemporalEntity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- WindDirection -->
+
+    <owl:Class rdf:about="WindDirection">
+        <rdfs:subClassOf rdf:resource="WeatherFeature"/>
+        <rdfs:label xml:lang="en">WindDirection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Height -->
+
+    <owl:Class rdf:about="Height">
+        <rdfs:subClassOf rdf:resource="TrafficAgentFeature"/>
+        <rdfs:label xml:lang="en">Height</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- WeatherFeature -->
+
+    <owl:Class rdf:about="WeatherFeature">
+        <rdfs:subClassOf rdf:resource="FeatureOfInterest"/>
+        <rdfs:label xml:lang="en">WeatherFeature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Position -->
+
+    <owl:Class rdf:about="Position">
+        <rdfs:subClassOf rdf:resource="TrafficAgentFeature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isLocatedAt"/>
+                <owl:someValuesFrom rdf:resource="TopologyFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- TrafficCenter -->
+
+    <owl:Class rdf:about="TrafficCenter">
+        <rdfs:subClassOf rdf:resource="AdministrativeArea"/>
+        <rdfs:label xml:lang="en">TrafficCenter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Weather -->
+
+    <owl:Class rdf:about="Weather">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasFeature"/>
+                <owl:someValuesFrom rdf:resource="WeatherFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Weather</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- ElderlyPeople -->
+
+    <owl:Class rdf:about="ElderlyPeople">
+        <rdfs:subClassOf rdf:resource="VRUGroup"/>
+        <rdfs:label xml:lang="en">ElderlyPeople</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Ultrasonic -->
+
+    <owl:Class rdf:about="Ultrasonic">
+        <rdfs:subClassOf rdf:resource="RoadSideSensor"/>
+        <rdfs:label xml:lang="en">Ultrasonic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- PedestrianLane -->
+
+    <owl:Class rdf:about="PedestrianLane">
+        <rdfs:subClassOf rdf:resource="TopologyFeature"/>
+        <rdfs:label xml:lang="en">PedestrianLane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- AdministrativeArea -->
+
+    <owl:Class rdf:about="AdministrativeArea">
+        <rdfs:label xml:lang="en">AdministrativeArea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Vehicle -->
+
+    <owl:Class rdf:about="Vehicle">
+        <rdfs:subClassOf rdf:resource="TrafficAgent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isEnvolved"/>
+                <owl:someValuesFrom rdf:resource="Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasGeneralFeature"/>
+                <owl:someValuesFrom rdf:resource="TrafficAgentFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasRoute"/>
+                <owl:someValuesFrom rdf:resource="Route"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Children -->
+
+    <owl:Class rdf:about="Children">
+        <rdfs:subClassOf rdf:resource="VRUGroup"/>
+        <rdfs:label xml:lang="en">Children</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Speed -->
+
+    <owl:Class rdf:about="Speed">
+        <rdfs:subClassOf rdf:resource="TrafficAgentFeature"/>
+        <rdfs:label xml:lang="en">Speed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- EndPoint -->
+
+    <owl:Class rdf:about="EndPoint">
+        <rdfs:subClassOf rdf:resource="Point"/>
+        <rdfs:label xml:lang="en">EndPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- TravelHabits -->
+
+    <owl:Class rdf:about="TravelHabits">
+        <rdfs:subClassOf rdf:resource="VRUFeature"/>
+        <rdfs:label xml:lang="en">TravelHabits</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- BehavioralPattern -->
+
+    <owl:Class rdf:about="BehavioralPattern">
+        <rdfs:subClassOf rdf:resource="VRUFeature"/>
+        <rdfs:label xml:lang="en">BehavioralPattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- WeatherStation -->
+
+    <owl:Class rdf:about="WeatherStation">
+        <rdfs:subClassOf rdf:resource="RoadSideSensor"/>
+        <rdfs:label xml:lang="en">WeatherStation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Lenght -->
+
+    <owl:Class rdf:about="Lenght">
+        <rdfs:subClassOf rdf:resource="TrafficAgentFeature"/>
+        <rdfs:label xml:lang="en">Lenght</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- Camera -->
+
+    <owl:Class rdf:about="Camera">
+        <rdfs:subClassOf rdf:resource="RoadSideSensor"/>
+        <rdfs:label xml:lang="en">Camera</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- FeatureOfInterest -->
+
+    <owl:Class rdf:about="FeatureOfInterest">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasMeasurement"/>
+                <owl:someValuesFrom rdf:resource="Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">FeatureOfInterest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- ForwardCollisionDetected -->
+
+    <owl:Class rdf:about="ForwardCollisionDetected">
+        <rdfs:subClassOf rdf:resource="Event"/>
+        <rdfs:label xml:lang="en">ForwardCollisionDetected</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+

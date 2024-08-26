@@ -233,8 +233,8 @@
               }
             }
           },
-          "pedestrian":{
-            "$ref": "https://raw.githubusercontent.com/victormanoly/dataModel.Transportation/master/Pedestrian/schema.json"
+          "VRU":{
+            "$ref": "https://raw.githubusercontent.com/victormanoly/dataModel.Transportation/master/VRU/schema.json"
           },  
           "vehicle": {
             "$ref": "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json",

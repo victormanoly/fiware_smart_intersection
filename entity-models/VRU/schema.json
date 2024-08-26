@@ -1,1 +1,122 @@
-
+{
+    "$schema": "http://json-schema.org/schema",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://raw.githubusercontent.com/victormanoly/dataModel.Transportation/master/Pedestrian/schema.json",
+    "title": "Smart Data models - Pedestrian",
+    "modelTags": "",
+    "description": "This model a particular pedestrian.",
+    "type": "object",
+    "required": [
+      "id",
+      "type",
+      "location"
+    ],
+    "allOf": [
+      {
+        "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      },
+      {
+        "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+      },
+      {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Pedestrian"
+            ],
+            "description": "Property. Model:'https://schema.org/Text'. Example of definition of a numerical attribute"
+          },
+          "pedestrianType": {
+            "type": "string",
+            "enum": [
+              "child",
+              "adult",
+              "elderly"
+            ],
+            "description": "Property. Type of pedestrian from the point of view of its age classification"
+          },
+          "location": {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+          },
+          "speed": {
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 0
+              },
+              {
+                "type": "number",
+                "minimum": -1,
+                "maximum": -1
+              }
+            ],
+            "description": "Property. Denotes the magnitude of the horizontal component of the vehicle's current velocity and is specified in Kilometers per Hour. If provided, the value of the speed attribute must be a non-negative real number. `-1` MAY be used if speed is transiently unknown for some reason. Model:'https://schema.org/Number'. Units:'Km/h'"
+          },
+          "heading": {
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 360
+              },
+              {
+                "type": "number",
+                "const": -1
+              }
+            ],
+            "description": "Property. Denotes the direction of travel of the pedestrian and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the pedestrian is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`. Model:'https://schema.org/Number'. Units:'Degree'"
+          },
+          "bearing": {
+            "type": "number",
+            "description": "Property. Model:'https://schema.org/Number'. Gives the pedestrian GPS angle measured in a clockwise direction from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)"
+          },
+          "zoneName": {
+            "type": "string",
+            "description": "Property. Model:'https://schema.org/Text'. Zone name of the entity corresponding to this observation"
+          },
+          "observationDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Property. Model:'https://schema.org/DateTime'. Last reported time of observation"
+          },
+          "reportID": {
+            "type": "string",
+            "description": "Property. Model:'https://schema.org/Text'. Unique Id assigned for the issue or report or feedback or transaction corresponding to this observation."
+          },
+          "municipalityInfo": {
+            "type": "object",
+            "description": "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation.",
+            "properties": {
+              "district": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. District name corresponding to this observation."
+              },
+              "cityID": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation."
+              },
+              "stateName": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation."
+              },
+              "cityName": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. City name corresponding to this observation."
+              },
+              "zoneName": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation."
+              },
+              "zoneID": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation."
+              }
+            }
+          }
+        }
+      }
+    ],
+    "derivedFrom": "",
+    "license": ""
+  }
